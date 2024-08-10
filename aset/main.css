@@ -217,7 +217,7 @@ body {
   position: relative;
   background: var(--two);
   height: 10vh;
-  margin-top: 10px;
+/*   margin-top: 10px; */
 }
 
 .wave {
