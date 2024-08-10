@@ -1,0 +1,681 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+/* all */
+:root {
+  /* span */
+  --one: #bbab8c;
+
+  /* waves */
+  --two: #ded0b6;
+
+  /* font text color */
+  --three: #faeed1;
+
+  --four: #fdf7e4;
+  --five: #3e3232;
+
+  /* bg color */
+  --six: #503c3c;
+
+  --seven: #7e6363;
+
+  --eight: #a87c7c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Mochiy Pop One", sans-serif;
+  background-color: var(--four);
+  color: var(--font);
+  overflow-x: hidden; /* Menghilangkan scrolling horizontal */
+}
+/* end all */
+
+/* media */
+#menu {
+  display: none;
+}
+
+
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 5%;
+  background-color: var(--six);
+  border-bottom: 1px solid var(--one);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.navbar .nav-logo {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--three);
+}
+
+.navbar .nav-logo span {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--one);
+  font-style: italic;
+}
+
+.navbar .nav-logo span:hover {
+  color: var(--three);
+}
+
+.navbar .navbar-isi a {
+  color: var(--three);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.navbar .navbar-isi a:hover {
+  color: var(--one);
+}
+
+.navbar .navbar-isi a:after {
+  content: " ";
+  display: block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--one);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-isi a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .nav-extra a {
+  color: var(--three);
+  margin: 0 5px;
+  font-size: 30px;
+}
+
+.navbar .nav-extra a:hover {
+  color: var(--one);
+  margin: 0 5px;
+  font-size: 30px;
+}
+/* end navbar */
+
+
+
+/* hero */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--two);
+  /* background-image: url("../img/content.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  opacity: 0.8; */
+}
+
+.hero .image {
+  max-width: 100%;
+  height: auto;
+  filter: brightness(70%);
+}
+.hero .content {
+  padding: 20px 10%;
+  max-width: 100%;
+}
+.hero .content h1 {
+  font-size: 50px;
+  color: var(--six);
+  /* line-height: 1.5; */
+}
+.hero .content h1 span {
+  font-size: 50px;
+  color: var(--eight);
+  line-height: 1.5;
+}
+
+.hero .content p {
+  font-size: 16px;
+  color: var(--five);
+  margin-top: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.hero .content p span {
+  font-size: 16px;
+  color: var(--eight);
+  margin-top: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.hero .content .res {
+  margin-top: 16px;
+  display: inline-block;
+  padding: 16px 48px;
+  font-size: 20px;
+  color: var(--three);
+  background-color: var(--five);
+  border-radius: 8px;
+}
+.hero .content .mn {
+  margin-top: 16px;
+  display: inline-block;
+  padding: 16px 48px;
+  font-size: 20px;
+  color: var(--five);
+  background-color: var(--eight);
+  border-radius: 8px;
+}
+.hero .content .res:hover {
+  margin-top: 16px;
+  display: inline-block;
+  padding: 16px 48px;
+  font-size: 20px;
+  color: var(--five);
+  background-color: var(--one);
+  border-radius: 8px;
+}
+.hero .content .mn:hover {
+  margin-top: 16px;
+  display: inline-block;
+  padding: 16px 48px;
+  font-size: 20px;
+  color: var(--four);
+  background-color: var(--five);
+  border-radius: 8px;
+}
+/* end hero */
+
+
+/* waving */
+.container {
+  position: relative;
+  background: var(--two);
+  height: 10vh;
+  margin-top: 10px;
+}
+
+.wave {
+  position: absolute;
+  height: 83px;
+  width: 100%;
+  background: var(--two);
+  bottom: 0;
+}
+
+.wave::before,
+.wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wave::before {
+  width: 55%;
+  height: 109%;
+  background-color: var(--four);
+  right: -1.5%;
+  top: 60%;
+}
+.wave::after {
+  width: 55%;
+  height: 100%;
+  background-color: var(--two);
+  left: -1.5%;
+  top: 40%;
+}
+
+.wavu {
+  position: absolute;
+  height: 83px;
+  width: 100%;
+  background: var(--four);
+  bottom: 0;
+}
+
+.wavu::before,
+.wavu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wavu::before {
+  width: 55%;
+  height: 109%;
+  background-color: var(--two);
+  right: -1.5%;
+  top: 60%;
+}
+.wavu::after {
+  width: 55%;
+  height: 100%;
+  background-color: var(--four);
+  left: -1.5%;
+  top: 40%;
+}
+/* end waving */
+
+
+
+/* about */
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  color: var(--five);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 6 45rem;
+}
+
+.about .row .about-img img {
+  width: 80%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.about .row .desc {
+  flex: 1 1 45rem;
+  padding: 0 1rem;
+}
+
+.about .row .desc h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--ccc);
+}
+
+.about .row .desc p {
+  margin-bottom: 2px;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 1.5;
+  text-align: justify;
+  color: var(--ccc);
+}
+
+/* end about */
+
+
+
+/* katalog */
+.katalog {
+  padding: 8rem 7% 1.4rem;
+  background-color:var(--two);
+  margin-bottom: 10px;
+}
+
+.katalog h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: var(--five);
+}
+
+.katalog p{
+  text-align: center;
+  max-width: 20rem;
+  margin: auto;
+  font-weight: 200;
+  line-height: 1.6;
+
+}
+
+.katalog .row .card{
+  margin: 0 20px 0 20px;
+  padding: 20px 5px 80px 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--eight);
+}
+
+.katalog .row .card a button{
+  margin: 30px 10px 0 10px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#wishlist{
+  background-color: var(--five);
+  color: var(--four);
+}
+
+#co{
+  background-color: var(--three);
+  color: var(--five);
+}
+
+.katalog .row .card img{
+  max-width: 200px;
+  height: auto;
+  border: solid 2px var(--five);
+  border-radius: 20px;
+  margin: 0 40px 0 40px;
+}
+
+.katalog .row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem  ;
+  justify-content: center;
+}
+
+.moremenu{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.moremenu a button{
+  font-size: 16px;
+  background-color: var(--eight);
+  color: var(--five);
+  padding: 15px 25px 15px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.moremenu a button:hover{
+  font-size: 16px;
+  color: var(--three);
+  background-color: var(--five);
+  padding: 15px 25px 15px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.card{
+  text-align: center;
+}
+/* end katalog */
+
+
+/* paket */
+.paket {
+  padding: 8rem 7% 1.4rem;
+}
+
+.paket h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  color: var(--five);
+}
+/* end paket */
+
+
+/* testi */
+.testi {
+  padding: 8rem 7% 1.4rem;
+}
+
+.testi h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  color: var(--five);
+}
+/* end testi */
+
+/* kontak */
+.kontak {
+  padding: 8rem 7% 1.4rem;
+}
+
+.kontak h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  color: var(--five);
+}
+/* end kontak */
+
+/* device hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 16px;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-isi {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--six);
+    width: 160px;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-isi.active {
+    right: 0;
+  }
+
+  .navbar .navbar-isi a {
+    color: black;
+    display: block;
+    margin: 24px;
+    padding: 8px;
+    font-size: 20px;
+  }
+  .navbar .navbar-isi a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-isi a:hover::after {
+    transform: scaleX(0.5);
+  }
+  .navbar .nav-extra a {
+    margin: 0 5px;
+  }
+
+  .hero {
+    margin-top: 40px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--two);
+    /* background-image: url("../img/content.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    opacity: 0.8; */
+  }
+
+  .hero .image {
+    max-width: 100%;
+    height: auto;
+  }
+  .hero .content {
+    padding: 20px 10%;
+    max-width: 100%;
+  }
+  .hero .content h1 {
+    font-size: 50px;
+    color: var(--six);
+    /* line-height: 1.5; */
+  }
+  .hero .content h1 span {
+    font-size: 50px;
+    color: var(--eight);
+    line-height: 1.5;
+  }
+
+  .hero .content p {
+    font-size: 16px;
+    color: var(--five);
+    margin-top: 16px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  .hero .content p span {
+    font-size: 16px;
+    color: var(--eight);
+    margin-top: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  .hero .content .res {
+    margin-top: 16px;
+    display: inline-block;
+    padding: 16px 48px;
+    font-size: 20px;
+    color: var(--three);
+    background-color: var(--five);
+    border-radius: 8px;
+  }
+  .hero .content .res:hover {
+    margin-top: 16px;
+    display: inline-block;
+    padding: 16px 48px;
+    font-size: 20px;
+    color: var(--five);
+    background-color: var(--one);
+    border-radius: 8px;
+  }
+
+  .about{
+    text-align: center;
+  }
+
+  .katalog .row .card{
+    margin: 10px 20px 10px 20px;
+    padding: 20px 5px 80px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--eight);
+    font-size: 16px;
+  }
+}
+/* end device hp */
+/* end media */
+
+
+
+
+
+
+
+
+
+
+
+
+/* loader */
+/* Gaya CSS untuk Loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Warna latar belakang dengan transparansi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Menetapkan z-index agar loader muncul di atas konten lainnya */
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Warna border loader */
+  border-top: 8px solid var(--five); /* Warna border loader ketika berputar */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Animasi loader berputar */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* footer */
+
+footer{
+  background-color: var(--five);
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 48px;
+}
+
+footer .sosmed{
+  padding: 16px ;
+}
+
+footer .sosmed a{
+  color: var(--four);
+  margin: 16px;
+}
+
+footer .navbar-link a{
+  margin: 16px;
+  color: var(--four);
+}
+
+footer .credit{
+  color: var(--four);
+  margin: 16px 0;
+}
+
+footer .credit p a span{
+  margin: 8px;
+  color: var(--eight);
+  font-weight: bold;
+}
+
+/* end footer */
